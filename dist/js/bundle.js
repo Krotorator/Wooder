@@ -1293,8 +1293,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 },{}],3:[function(require,module,exports){
 "use strict";
 
-document.addEventListener("DOMContentLoaded", function () {});
-
 var anime = require("animejs");
 
 require("waypoints/lib/noframework.waypoints.min");
@@ -1461,4 +1459,11 @@ var waypoint8 = new Waypoint({
   offset: "100%"
 });
 
-},{"animejs":1,"waypoints/lib/noframework.waypoints.min":2}]},{},[3]);
+},{"animejs":1,"waypoints/lib/noframework.waypoints.min":2}],4:[function(require,module,exports){
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
+  require("./animation.js");
+});
+
+},{"./animation.js":3}]},{},[4]);

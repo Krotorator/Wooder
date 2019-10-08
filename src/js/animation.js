@@ -70,20 +70,22 @@ anime
 const waypoint1 = new Waypoint({
     element: document.querySelector(".product__furniture .product__img-wrap"),
     handler: direction => {
+        if (screen.width > 480) {
+            anime({
+                targets: ".product__furniture .product__card",
+                translateX: ["-50%", "0"],
+                easing: "easeOutExpo",
+                opacity: ["0", "1"]
+            });
+        }
         anime({
             targets: ".product__furniture .product__img-wrap",
             translateY: ["50%", "0"],
             easing: "easeOutExpo",
             opacity: ["0", "1"]
         });
-        anime({
-            targets: ".product__furniture .product__card",
-            translateX: ["-50%", "0"],
-            easing: "easeOutExpo",
-            opacity: ["0", "1"]
-        });
     },
-    offset: "100%"
+    offset: "110%"
 });
 
 const waypoint2 = new Waypoint({
@@ -95,14 +97,16 @@ const waypoint2 = new Waypoint({
             easing: "easeOutExpo",
             opacity: ["0", "1"]
         });
-        anime({
-            targets: ".product__decor .product__card",
-            translateX: ["50%", "0"],
-            easing: "easeOutExpo",
-            opacity: ["0", "1"]
-        });
+        if (screen.width > 480) {
+            anime({
+                targets: ".product__decor .product__card",
+                translateX: ["50%", "0"],
+                easing: "easeOutExpo",
+                opacity: ["0", "1"]
+            });
+        }
     },
-    offset: "100%"
+    offset: "110%"
 });
 
 const waypoint3 = new Waypoint({
@@ -116,7 +120,7 @@ const waypoint3 = new Waypoint({
             delay: anime.stagger(150)
         });
     },
-    offset: "100%"
+    offset: "110%"
 });
 
 const waypoint4 = new Waypoint({
@@ -135,13 +139,15 @@ const waypoint4 = new Waypoint({
 const waypoint5 = new Waypoint({
     element: document.querySelector(".weDo__description"),
     handler: direction => {
-        anime({
-            targets: ".weDo__text",
-            easing: "easeOutExpo",
-            translateY: ["20%", "0%"],
-            opacity: ["0", "1"],
-            delay: 300
-        });
+        if (screen.width > 480) {
+            anime({
+                targets: ".weDo__text",
+                easing: "easeOutExpo",
+                translateY: ["20%", "0%"],
+                opacity: ["0", "1"],
+                delay: 300
+            });
+        }
     },
     offset: "100%"
 });
@@ -168,12 +174,14 @@ const waypoint7 = new Waypoint({
             easing: "easeOutExpo",
             opacity: ["0", "1"]
         });
-        anime({
-            targets: ".about .about__card",
-            translateX: ["20%", "0"],
-            easing: "easeOutExpo",
-            opacity: ["0", "1"]
-        });
+        if (screen.width > 480) {
+            anime({
+                targets: ".about .about__card",
+                translateX: ["20%", "0"],
+                easing: "easeOutExpo",
+                opacity: ["0", "1"]
+            });
+        }
     },
     offset: "100%"
 });
